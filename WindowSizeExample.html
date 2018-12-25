@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>获取页面视口大小</h1>
+		
+		<script type="text/javascript">
+			var pageHeight = window.innerHeight;
+			var pageWidth = window.innerWidth;
+			if(typeof pageWidth!="number"){
+				if(document.compatMode == "CSS1Compat"){
+					pageHeight = document.documentElement.clientHeight;
+					pageWidth = document.documentElement.clientWidth;
+				}else{
+					pageHeight=document.body.clientHeight;
+					pageWidth=document.body.clientWidth;
+				}
+			}
+			alert(pageHeight);
+			alert(pageWidth);
+		</script>
+	</body>
+</html>
