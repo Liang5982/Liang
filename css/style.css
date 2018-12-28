@@ -15,7 +15,7 @@ body{
 
 /* 头部 */
 header#webTitle{
-	width: 900px;
+	width: 980px;
 	margin: 0 auto;
 }
 
@@ -23,7 +23,7 @@ header#webTitle{
 	margin-top: 10px;
 	display: flex;
 	justify-content: space-between;
-	width: 900px;
+	width: 980px;
 }
 
 #topLeft{
@@ -35,20 +35,29 @@ header#webTitle{
 }
 
 #topMid{
+	margin: auto;
 }
 
 #topMid #wrap #button {
+	position: relative;
+	right: 50px;
 	color: white;
-	background-color: blue;
-	border: 1px solid #00BFFF;
+	width: 50px;
+	height: 50px;
+	background: url(../images/baidu1.png) no-repeat;
+	border: 1px solid white;
+	outline: none;
 	font-size: 20px;
 	padding: 5px;
+	border-radius: 2px;
 }
 
 #topMid	#wrap #txt {
-	border: 1px solid #00BFFF;
+	border: 1px solid #46b8da;
 	font-size: 22px;
-	padding: 5px;
+	padding: 10px;
+	border-radius:5px;
+	outline:none;
 }
 
 #topMid	#wrap #res {
@@ -57,40 +66,160 @@ header#webTitle{
 	color: white;
 	font-size: 14px;
 	margin: 0;
-	padding: 0;
+	padding: 0 2px;
 	display: block;
 	width: 280px;
 }
 
 .active {
 	line-height: 20px;
-	padding: 5px;
-	color: black;
+	padding: 5px 0;
+	color: white;
 	text-decoration: none;
 	display: block;
-	background-color: wheat;
-}
-
-.clickBg {
-	line-height: 20px;
-	padding: 5px;
-	color: black;
-	text-decoration: none;
-	display: block;
-	background-color: cornflowerblue;
+	background-color: #00BFFF;
 }
 
 #topRight{
+	margin: auto 0;
+	position: relative;
+}
+#topRight button{
+	width: 50px;
+	height: 50px;
+	outline: none;
+	border: 1px solid white;
+}
+
+#topRight #userLogin{
+	background: url(../images/登录1.png) no-repeat;
+}
+
+#topRight #user-Register{
+	margin-left: 10px;
+	background: url(../images/注册.png) no-repeat;
+	background-size: 38px 38px;
+	background-position: right center;
+}
+
+/* 用户登录注册界面*/
+.user-modal{
+	display: none;
+	z-index: 2;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0,0.5); 
+}
+#user-form{
+	box-sizing: border-box;
+	box-shadow: 10px 10px 2px #645a5a;
+	margin: 150px auto;
+	width: 300px;
+	height: 320px;
+	background: #d6e9c6;
+	border-radius: 5px;
+	
+}
+.loginBtn{
+	height: 80px;
+}
+.loginBtn button{
+	float: left;
+	width: 50%;
+	background-color: white;
+	border: 1px solid white;
+	padding: 15px;
+	font-size: 25px;
+	margin-bottom: 10px;
+}
+
+.loginBtn #btn-left{
+	background-color: #80808029;
+	border: 1px solid #80808029;
+}
+
+
+/* 登录表单 */
+
+#login_container {
+	display: none;
 	text-align: center;
+	height: 200px;
+	padding: 10px;
 }
-#topRight input{
-	padding:2px;
-	border-radius:5%;
+
+#login_container input{
+	padding: 5px;
+	width: 250px;
+	font-size: 18px;
+	margin: 10px;
 }
+
+#login_container .rememberOrfindPwd{
+	display: inline-block;
+	height: 40px;
+}
+#login_container .rememberOrfindPwd button{
+	float: left;
+	height: 40px;
+	font-size: 20px;
+	border: 1px solid white;
+	width: 100px;
+	position: relative;
+	right: 27px;
+	top: 10px;
+}
+
+#login_container .rememberOrfindPwd #remember{
+	float: right;
+	width: 100px;
+	position: relative;
+	bottom: 22px;
+	left: 10px;
+	
+}
+#login_container .rememberOrfindPwd span{
+	position: relative;
+	left: 50px;
+	top: 17px;
+	
+}
+
+/* 登录表单结束 */
+
+/* 注册表单 */
+#regist_container {
+	display: none;
+	text-align: center;
+	height: 200px;
+	padding: 10px;
+}
+
+#regist_container input{
+	padding: 5px;
+	width: 250px;
+	font-size: 18px;
+	margin: 10px;
+}
+
+#regist_container #login_btn{
+	width: 100px;
+	height: 40px;
+	border: 1px solid white;
+}
+#regist_container #rememberOrfindPwd{
+	display: inline-block;
+	height: 40px;
+}
+
+/* 注册表单结束 */
 header nav{
 	background-color: blanchedalmond;
 	border-radius: 5px;
-	width: 900px;
+	width: 980px;
 	margin-bottom: 12px;
 }
 ul#topNavUrl{
@@ -109,14 +238,13 @@ ul#topNavUrl li:hover{
 	color: deepskyblue;
 }
 #imgSection2{
-	width: 900px;
+	width: 980px;
 	border-radius: 5px;
 }
-
 /* 网页中部 */
 .container {
     margin: 12px auto;
-    width: 900px;
+    width: 980px;
     overflow: hidden;
     zoom: 1;
 }
